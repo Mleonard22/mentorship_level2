@@ -15,10 +15,10 @@
 
 // ---------- data ----------
 let expenses = [
-    {expenseName:"Meal", cost: 22, type: "food", isNecessary: false }, 
+    {expenseName:"Meal", cost: 22, type: "Food", isNecessary: false }, 
     {expenseName: "Water Bill", cost: 100, type: "Bill", isNecessary: true
     },
-    {expenseName: "Netflix", cost: 15, type:"entertainment", isNecessary: false},
+    {expenseName: "Netflix", cost: 15, type:"Entertainment", isNecessary: false},
     {expenseName: "Car Note", cost: 200, type:"Bill", isNecessary: true}
 ]
 // ---------- functions ----------
@@ -37,7 +37,17 @@ function cheapExpense(theExpense) {
         return `The ${theExpense.expenseName} was high.`
     }
 }
+// I don't think this was covered yet, but I wanted to see if I could do it without looking anything up and see if I could get it right.
+function totalAmount(expense) {
+    let startAmount = 0;
+    for (let i = 0; i < expense.length; i++) { startAmount = startAmount + expense[i].cost;
+    }
+    return `The total amount of expenses is $${startAmount} dollars.`
+}
+
 // ---------- output ----------
+
+console.log(totalAmount(expenses)); 
 
 console.log(fixedExpense(expenses[1]));
 
