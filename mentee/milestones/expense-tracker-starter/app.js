@@ -14,7 +14,31 @@
 //   { label: "Internet", amount: 45, category: "home", isPaid: false }
 
 // ---------- data ----------
-
+let expenses = [
+    {expenseName:"Meal", cost: 22, type: "food", isNecessary: false }, 
+    {expenseName: "Water Bill", cost: 100, type: "Bill", isNecessary: true
+    },
+    {expenseName: "Netflix", cost: 15, type:"entertainment", isNecessary: false},
+    {expenseName: "Car Note", cost: 200, type:"Bill", isNecessary: true}
+]
 // ---------- functions ----------
+function fixedExpense(theExpense) {
+    if (theExpense.isNecessary == true) {
+        return `The expense ${theExpense.expenseName}, was needed and already in the budget.`
+    } else {
+        return "The was not added in the budget."
+    }
+}
 
+function cheapExpense(theExpense) {
+    if (theExpense.cost < 50) {
+        return `The ${theExpense.expenseName} wasnt costly.`
+    } else {
+        return `The ${theExpense.expenseName} was high.`
+    }
+}
 // ---------- output ----------
+
+console.log(fixedExpense(expenses[1]));
+
+console.log(cheapExpense(expenses[3]));
