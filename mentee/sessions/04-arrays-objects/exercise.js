@@ -24,7 +24,9 @@ function changeDay(day) {
     let existingDay = day.days[0].date;
     console.log(existingDay)
 
-    existingDay = "Fri";
+    existingDay.date = "Fri"
+    
+    return existingDay
 } 
 
 console.log(changeDay(weather))
