@@ -20,9 +20,11 @@ console.log(tuesday.condition);
 
 // modify task:
 
+// question on this:
+
 function changeDay(day) {
-    let existingDay = day.days[0].date;
-    console.log(existingDay)
+    let existingDay = day.days[0];
+    //console.log(existingDay)
 
     existingDay.date = "Fri"
     

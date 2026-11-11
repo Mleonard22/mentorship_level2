@@ -37,7 +37,7 @@ function cheapExpense(theExpense) {
         return `The ${theExpense.expenseName} was high.`
     }
 }
-// I don't think this was covered yet, but I wanted to see if I could do it without looking anything up and see if I could get it right.
+
 function totalAmount(expense) {
     let startAmount = 0;
     for (let i = 0; i < expense.length; i++) { startAmount = startAmount + expense[i].cost;
