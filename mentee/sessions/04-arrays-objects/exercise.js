@@ -20,7 +20,6 @@ console.log(tuesday.condition);
 
 // modify task:
 
-// question on this:
 
 function changeDay(day) {
     let existingDay = day.days[0];
