@@ -25,63 +25,75 @@ const players = [
     name: "Juan Soto",
     homeRuns: 43,
     isStarting: false,
-    positions: ["Left field", "Right field"],
+    positions: ["Left field", " Right field"],
   },
   {
     name: "Carson Benge",
     homeRuns: 21,
     isStarting: true,
-    positions: ["Right field", "Left field", "Center field"],
+    positions: ["Right field", " Left field", " Center field"],
   },
 ];
 
-function itemDescription(players) {
-  const description = [];
+// function itemDescription(players) {
+//   const description = [];
 
-  for (const player of players) {
-    const { name, homeRuns } = player;
+//   for (const player of players) {
+//     const { name, homeRuns } = player;
 
-    description.push(`Player name: ${name} - Home Runs: ${homeRuns}`);
-  }
-  return description;
-}
+//     description.push(`Player name: ${name} - Home Runs: ${homeRuns}`);
+//   }
+//   return description;
+// }
 
-console.log(itemDescription(players));
+function myDescription (players) {
 
-function matchCount(player) {
-  let count = 0;
-  for (let i = 0; i < player.length; i++) {
-    if (player[i].isStarting) {
-      count += 1;
-    }
-  }
-  return count;
-}
+  for (const player of players){ 
+    const { name, positions} = player // this part always gets me. First take out what I'll need to take out and then I assign it, in this case to that specific object where the info is 
+    
+    console.log(`This is player ${name} and they play these postions ${positions}`)
 
-console.log(matchCount(players));
-
-function homeRunTotal(players) {
-  let total = 0;
-  for (let i = 0; i < players.length; i++) {
-    total += players[i].homeRuns;
-  }
-  return total;
-}
-
-function findPlayer(players) {
-  for (const player of players) {
-    if (player.name === "Juan Soto") {
-      return player;
-    }
-  }
-
-  return null;
-}
-
-console.log(findPlayer(players));
-
-function listOfPlayers(player) {
-  for (let i = 0; i < player.length; i++) {
-    return `#${i + 1}: ${player[i].name} - Home Runs: ${player[i].homeRuns}`;
   }
 }
+
+myDescription(players)
+
+// console.log(itemDescription(players));
+
+// function matchCount(player) {
+//   let count = 0;
+//   for (let i = 0; i < player.length; i++) {
+//     if (player[i].isStarting) {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(matchCount(players));
+
+// function homeRunTotal(players) {
+//   let total = 0;
+//   for (let i = 0; i < players.length; i++) {
+//     total += players[i].homeRuns;
+//   }
+//   return total;
+// }
+
+// function findPlayer(players) {
+//   for (const player of players) {
+//     if (player.name === "Juan Soto") {
+//       return player;
+//     }
+//   }
+
+//   return null;
+// }
+
+// console.log(findPlayer(players));
+
+// function listOfPlayers(player) {
+//   for (let i = 0; i < player.length; i++) {
+//     return `#${i + 1}: ${player[i].name} - Home Runs: ${player[i].homeRuns}`;
+//   }
+// }
