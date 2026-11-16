@@ -15,11 +15,13 @@
 
 // ---------- data ----------
 let expenses = [
-    {expenseName:"Meal", cost: 22, type: "Food", isNecessary: false }, 
-    {expenseName: "Water Bill", cost: 100, type: "Bill", isNecessary: true
+    {expenseName:"Meal", cost: 22, type: "Food", isPaid: false }, 
+    {expenseName: "Water Bill", cost: 100, type: "Bill", isPaid: true
     },
-    {expenseName: "Netflix", cost: 15, type:"Entertainment", isNecessary: false},
-    {expenseName: "Car Note", cost: 200, type:"Bill", isNecessary: true}
+    {expenseName: "Netflix", cost: 15, type:"Entertainment", isPaid: false},
+    {expenseName: "Car Note", cost: 200, type:"Bill", isPaid: true},
+    {expenseName: "Rent", cost: 700, type:"Bill", isPaid: true}
+
 ]
 
 

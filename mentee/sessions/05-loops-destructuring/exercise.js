@@ -19,4 +19,17 @@ for (const score of scores) {
 console.log(count);
 
 
-   
+/*
+/ home work for session 5: 
+
+function listExpenses(expenses) {
+    const allExpenses = []
+    for (const expense of expenses) {
+        const { cost, expenseName} = expense;
+        allExpenses.push(`This is the expenese ${expenseName} and it cost $${cost} dollars.`) 
+    }
+    return allExpenses;
+}
+
+
+/*
