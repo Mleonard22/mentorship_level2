@@ -27,7 +27,11 @@ if  (score >= 90) {
 //J
 console.log(`Grade: ${grade}`);
 
+/*
+Before you write any code, decide where the new check goes in your chain and write one sentence explaining why. Then add it, and test it with an international order of $600.:
 
+I think the conditional could go anywhere after checking if the customer is a memeber. The conditional is unquie in that it's looking for an order that is specifially over 500 since that will make the shipping free. The only other way that this wouldn't matter is if the customer was already a member, then at the point, regardless if the order was over 500 or not  the shipping would be free
+*/
 
 
 let orderTotal = 600;
@@ -42,7 +46,7 @@ if (isMember) {
   shippingCost = 0;
 } else if (country === "local") {
   shippingCost = 5;
-} else if ( orderTotal >= 500 ) {
+} else if ( orderTotal > 500 ) {
     shippingCost = 0;
 } else {
   shippingCost = 15;

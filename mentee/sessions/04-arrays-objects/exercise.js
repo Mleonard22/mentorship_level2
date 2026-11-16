@@ -7,15 +7,15 @@ const weather = {
 };
 
 
-//A
-const days = weather.days;
+// //A
+// const days = weather.days;
 
 
-//B
-const tuesday = days[1];
+// //B
+// const tuesday = days[1];
 
-//C
-console.log(tuesday.condition);
+// //C
+// console.log(tuesday.condition);
 
 
 // modify task:
@@ -26,8 +26,12 @@ function changeDay(day) {
     //console.log(existingDay)
 
     existingDay.date = "Fri"
-    
+
     return existingDay
 } 
 
-console.log(changeDay(weather))
+let changedDate = changeDay(weather)
+
+console.log(changedDate)
+
+

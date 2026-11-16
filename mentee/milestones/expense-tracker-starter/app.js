@@ -21,6 +21,9 @@ let expenses = [
     {expenseName: "Netflix", cost: 15, type:"Entertainment", isNecessary: false},
     {expenseName: "Car Note", cost: 200, type:"Bill", isNecessary: true}
 ]
+
+
+
 // ---------- functions ----------
 function fixedExpense(theExpense) {
     if (theExpense.isNecessary == true) {
@@ -38,14 +41,48 @@ function cheapExpense(theExpense) {
     }
 }
 
+
+//covers stage 2: 
 function totalAmount(expense) {
     let startAmount = 0;
-    for (let i = 0; i < expense.length; i++) { startAmount = startAmount + expense[i].cost;
+    for (let i = 0; i < expense.length; i++) 
+        { startAmount = startAmount + expense[i].cost;
     }
     return `The total amount of expenses is $${startAmount} dollars.`
 }
 
+
+// home work for session 5: 
+
+function listExpenses(expenses) {
+    const allExpenses = []
+    for (const expense of expenses) {
+        const { cost, expenseName} = expense;
+        allExpenses.push(`This is the expenese ${expenseName} and it cost $${cost} dollars.`) 
+    }
+    return allExpenses;
+}
+
+// instead of doing unpaid expenses, since I don't have that as a category, I did non essential expenses:
+
+function variableExpenses (expenses) {
+    const varExpenses = [];
+
+    for (const expense of expenses) {
+        const { expenseName, isNecessary } = expense;
+        if (!isNecessary) {
+        varExpenses.push(expenseName) 
+        }
+    }
+    return `This is a list of non essential expenses: ${varExpenses}`
+}
+
+
 // ---------- output ----------
+
+console.log(variableExpenses(expenses));
+
+console.log(listExpenses(expenses));
 
 console.log(totalAmount(expenses)); 
 
