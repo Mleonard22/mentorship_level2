@@ -21,17 +21,57 @@ const weather = {
 // modify task:
 
 
-function changeDay(day) {
-    let existingDay = day.days[0];
-    //console.log(existingDay)
+// function changeDay(day) {
+//     let existingDay = day.days[0];
+//     //console.log(existingDay)
 
-    existingDay.date = "Fri"
+//     existingDay.date = "Fri"
 
-    return existingDay
-} 
+//     return existingDay
+// } 
 
-let changedDate = changeDay(weather)
+// let changedDate = changeDay(weather)
 
-console.log(changedDate)
+// console.log(changedDate)
+
+
+
+const players = [
+  {
+    name: "Francisco Lindor",
+    homeRuns: 31,
+    isStarting: true,
+    qualities: { favFood: "Pizza", height: "7 ft", favColor: "Black"}
+  },
+  {
+    name: "Juan Soto",
+    homeRuns: 43,
+    'is Starting': false,
+    positions: ["Left field", "Right field", ["up", "down"]],
+  },
+  {
+    name: "Carson Benge",
+    homeRuns: 21,
+    isStarting: true,
+    positions: ["Right field", "Left field", "Center field"],
+  },
+];
+
+function getLineupStatus(player) {
+  // return 20
+ player.homeRuns = 21;
+}
+
+// getLineupStatus(players[0]);
+// console.log(players[0].homeRuns)
+
+console.log(players[1]["is Starting"])
+
+// console.log(getLineupStatus(players[0]))
+// console.log(players[0].homeRuns)
+
+// function describePlayer(player) {
+//   return `${player.name} plays ${player.positions} and has ${player.homeRuns} home runs.`;
+// }
 
 

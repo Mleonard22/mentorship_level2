@@ -67,27 +67,43 @@ function listExpenses(expenses) {
 
 // instead of doing unpaid expenses, since I don't have that as a category, I did non essential expenses:
 
-function variableExpenses (expenses) {
-    const varExpenses = [];
+// function variableExpenses (expenses) {
+//     const varExpenses = [];
 
+//     for (const expense of expenses) {
+//         const { expenseName, isPaid } = expense;
+//         if (!isPaid) {
+//         varExpenses.push(expenseName) 
+//         }
+//     }
+//     return `This is a list of non essential expenses: ${varExpenses}`
+// }
+
+
+function getUnpaid(expenses) {
+   
+    const name = [];
+    let total = 0;
     for (const expense of expenses) {
-        const { expenseName, isNecessary } = expense;
-        if (!isNecessary) {
-        varExpenses.push(expenseName) 
-        }
-    }
-    return `This is a list of non essential expenses: ${varExpenses}`
+         const { expenseName, cost, isPaid} = expense
+        if (isPaid === false){
+            name.push(expenseName)
+            total += cost}
+   
+} return `the expesnes are ${name} and the total comes out to $${total} dollars`
 }
 
 
 // ---------- output ----------
 
-console.log(variableExpenses(expenses));
+console.log(getUnpaid(expenses))
 
-console.log(listExpenses(expenses));
+// console.log(variableExpenses(expenses));
 
-console.log(totalAmount(expenses)); 
+// console.log(listExpenses(expenses));
 
-console.log(fixedExpense(expenses[1]));
+// console.log(totalAmount(expenses)); 
 
-console.log(cheapExpense(expenses[3]));
+// console.log(fixedExpense(expenses[1]));
+
+// console.log(cheapExpense(expenses[3]));
