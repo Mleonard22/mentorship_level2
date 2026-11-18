@@ -29,7 +29,26 @@ console.log("predict.js running");
 // const nums = [1, 2, 3];
 // const out = nums.map((n) => n * 2);
 
-// console.log(out);
+// console.log(out); //2,4,6
+
+// const products = [
+//   { name: "var1", price: 222, inStock: true },
+//   { name: "var2", price: 22, inStock: false },
+//   { name: "var3", price: 2220, inStock: true },
+// ];
+
+// const productList = document.getElementById("productList");
+
+// const productsInfo = products.map((product) => {
+//   return `${product.name} costs $${product.price}`;
+// });
+
+// productsInfo.forEach((productInfo) => {
+//   const li = document.createElement("li");
+
+//   li.textContent = productInfo;
+//   productList.append(li);
+// });
 
 // 2. `[1, 2, 3].filter((n) => n > 1).length` gives?
 
@@ -37,8 +56,8 @@ console.log("predict.js running");
 
 // const filteredNums = nums.filter((n) => n > 1);
 
-// console.log(filteredNums); // 2, 3
-// console.log(filteredNums.length); // 2
+// console.log(filteredNums);
+// console.log(filteredNums.length);
 
 // // 3. What's `a[0].x` at the end?
 
@@ -106,23 +125,66 @@ console.log("predict.js running");
 
 // 1. Target the UL in the HTML doc using DOM.
 
-const unOrderedList = document.getElementById("list");
-const newHeading = document.getElementById("change");
+// const unOrderedList = document.getElementById("list");
+// const newHeading = document.getElementById("change");
 
-newHeading.textContent = "Welcome";
+// newHeading.textContent = "Welcome";
 
-const listItem = document.createElement("li");
-listItem.textContent = "Buy milk";
+// const listItem = document.createElement("li");
+// listItem.textContent = "Buy milk";
 
-listItem.classList.add("start");
-// listItem.classList.remove("done");
+// listItem.classList.add("start");
+// // listItem.classList.remove("done");
 
-listItem.className = "done";
+// listItem.className = "done";
 
-const listItem2 = document.createElement("li");
-listItem2.textContent = "Call Bank";
+// const listItem2 = document.createElement("li");
+// listItem2.textContent = "Call Bank";
 
-const listItem3 = document.createElement("li");
-listItem3.textContent = "Walk Dog";
+// const listItem3 = document.createElement("li");
+// listItem3.textContent = "Walk Dog";
 
-unOrderedList.append(listItem2, listItem);
+// unOrderedList.append(listItem2, listItem);
+
+// const headingTwo = document.getElementById("change");
+// const div = document.getElementById("div");
+
+// headingTwo.textContent = "To Do List";
+
+// div.innerHTML = '<button id="btnDiv" >Click Me</button>';
+// const btnDiv = document.getElementById("btnDiv");
+
+// btnDiv.classList.add("styleBtn");
+// btnDiv.classList.remove("styleBtn");
+
+// const products = [];
+
+// const productList = document.getElementById("productList");
+// const addButton = document.getElementById("addProduct");
+
+// function showProducts() {
+//   productList.textContent = "";
+
+//   products.forEach((product) => {
+//     const li = document.createElement("li");
+
+//     li.textContent = `${product.name} - $${product.price}`;
+
+//     productList.append(li);
+//   });
+// }
+
+// addButton.addEventListener("click", () => {
+//   const name = document.getElementById("productName").value;
+//   const price = Number(document.getElementById("productPrice").value);
+
+//   if (!name.trim() || !Number.isFinite(price) || price <= 0) {
+//     return;
+//   }
+
+//   products.push({ name, price });
+
+//   showProducts();
+// });
+
+// showProducts();
