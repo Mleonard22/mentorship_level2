@@ -2,11 +2,22 @@
 
 console.log("predict.js running");
 
-// document.querySelector(".demo") // class
-// document.querySelector("#demo") // id
-// document.getElementById("demo") // id
+// document.querySelector(".demo"); // class
+// document.querySelector("#demo"); // id
+// document.getElementById("demo"); // id
 // document.querySelector("h1") // tag
 // document.querySelectorAll()
+
+// const headingTwo = document.getElementById("change");
+// const div = document.querySelector("#div");
+
+// headingTwo.textContent = "TO DO LIST";
+// div.innerHTML = '<button id="btn">CLICK ME</button>';
+
+// const btn = document.querySelector("#btn");
+
+// btn.classList.add("styleBtn");
+// btn.classList.remove("styleBtn");
 
 // const demo = document.querySelectorAll(".heading");
 
