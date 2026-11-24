@@ -1,7 +1,6 @@
 // Session 07 — what you build in class, and the exercise.
 
 console.log("make.js running");
-<<<<<<< HEAD
 // Session 07 — your before-class prediction snippet.
 
 console.log("predict.js running");
@@ -101,7 +100,6 @@ function createTaskElement({ title, isDone }) {
 // E   });
 // F   }
 // X   list.append(createTaskElement);
-=======
 
 // DOM Challenge — My Song List 🎵
 
@@ -185,4 +183,3 @@ function renderSongs() {
 }
 
 renderSongs();
->>>>>>> 9f240683d6d07fff5c99318bae8b37fab5eeaa82
