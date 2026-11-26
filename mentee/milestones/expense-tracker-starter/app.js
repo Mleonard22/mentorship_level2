@@ -122,8 +122,65 @@ function getPriority(expense) {
 
 // Covers Stage 3:
 
+function getunPaidarr(expenses) {
+    
+    const unPaidExpenses = expenses.filter((expense) => !expense.isPaid);
+    
+    const namesofExpenses = unPaidExpenses.map((expense) => expense.expenseName)
+  
+    return namesofExpenses;
+}
+
+function getLabels(expenses) {
+    const labels = expenses.map((expense) => expense.expenseName );
+    
+   return labels
+
+}
+
+function findExpense(expenses, value) {
+    const specificExpense = expenses.find((expense) => 
+        expense.expenseName === value)
+
+    if (!specificExpense) {
+        return "Not a value"
+    }
+    
+    
+    return specificExpense;
+}
+
+
+// remake of this function 
+
+// function getTotal(expense) {
+//     let startAmount = 0;
+//     for (let i = 0; i < expense.length; i++) 
+//         { startAmount = startAmount + expense[i].cost;
+//     }
+//     return `The total amount of expenses is $${startAmount} dollars.`
+// }
+
+function getTotalRemake(expense) {
+    let startAmount = 0;
+    
+    expenses.forEach((expense) => startAmount += expense.cost)
+    
+    return startAmount;
+}
+
 
 // ---------- output ----------
+
+//console.log(getLabels(expenses)) //Output: [ 'Meal', 'Water Bill', 'Netflix', 'Car Note', 'Rent', 'Insurance' ]
+
+console.log(findExpense(expenses, "Rent")) //Output: { expenseName: 'Rent', cost: 700, type: 'Bill', isPaid: true }
+
+
+console.log(findExpense(expenses, "Gas")) //Output: Not a value
+
+console.log(getTotalRemake(expenses)) //Output: 2037
+
 
 // console.log(describeExpense(expenses[1])) // Output: Water Bill - $100 (Bill, Paid)
 // console.log(describeExpense(expenses[3])) // Output: Car Note - $200 (Bill, Paid)
@@ -134,7 +191,7 @@ function getPriority(expense) {
 // console.log(getPriority(expenses[5])) // Output: Pay First
 
 
-console.log(getUnpaidTotal(expenses)) // Output: The total amount of unpaid expenses is $1037 dollars.
+// console.log(getUnpaidTotal(expenses)) // Output: The total amount of unpaid expenses is $1037 dollars.
 
 // console.log(getUnpaid(expenses))
 
@@ -147,3 +204,6 @@ console.log(getUnpaidTotal(expenses)) // Output: The total amount of unpaid expe
 // console.log(fixedExpense(expenses[1]));
 
 // console.log(cheapExpense(expenses[3]));
+
+//console.log(getunPaidarr(expenses)) // output: [ 'Meal', 'Netflix', 'Insurance' ]
+
